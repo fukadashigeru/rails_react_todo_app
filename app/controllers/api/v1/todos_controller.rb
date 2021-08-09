@@ -33,7 +33,7 @@ module Api
         if Todo.destroy(params[:id])
           head :no_content
         else
-          render json: { error: 'Failed to destroy'}, status: 422
+          render json: { error: 'Failed to destroy' }, status: 422
         end
       end
 
@@ -41,7 +41,7 @@ module Api
         if Todo.destroy_all
           head :no_content
         else
-          render json: { error: 'Failed to destroy'}, status: 422
+          render json: { error: 'Failed to destroy' }, status: 422
         end
       end
 
