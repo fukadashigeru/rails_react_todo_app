@@ -22,8 +22,8 @@ module Api
 
       def update
         todo = Todo.find(params[:id])
-        if todo.udpate(todo_params)
-          render json :todo
+        if todo.update(todo_params)
+          render json: todo
         else
           render json: todo.errors, status: 422
         end
@@ -48,7 +48,7 @@ module Api
       private
 
       def todo_params
-        params.require(:todo).permit(:name, is_completed)
+        params.require(:todo).permit(:name, :is_completed)
       end
     end
   end
