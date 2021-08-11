@@ -14,7 +14,7 @@ module Api
       def create
         todo = Todo.new(todo_params)
         if todo.save
-          render json :todo
+          render json: todo
         else
           render json: todo.errors, status: 422
         end
