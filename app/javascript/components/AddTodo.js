@@ -62,6 +62,7 @@ function AddTodo(props) {
       hideProgressBar: true
     })
   }
+
   const saveTodo = () => {
     var data = {
       name: todo.name
